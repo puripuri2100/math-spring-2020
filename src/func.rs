@@ -82,8 +82,8 @@ pub fn check_size(all: u64, group: u64, n: u64) -> String {
     main_size
   );
   // 49C1
-  let (m_num, m_size) = get_size(combin(member - n, n));
-  println!("{}C{} -> {} * (10 ^ {})", member - n, n, m_num, m_size);
+  let (m_num, m_size) = get_size(combin(member - 1, n));
+  println!("{}C{} -> {} * (10 ^ {})", member - 1, n, m_num, m_size);
   let all_num = com_num * main_num * m_num;
   let all_size = com_size + main_size + m_size;
   format!("{} * (10 ^ {})", all_num, all_size)
