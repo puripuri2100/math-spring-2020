@@ -54,7 +54,7 @@ fn get_size(n: U2048) -> (f32, usize) {
   let n_num: f32 = format!(
     "{}.{}",
     n_str.chars().nth(0).unwrap(),
-    n_str.chars().nth(1).unwrap()
+    n_str.chars().nth(1).unwrap_or('0')
   )
   .parse()
   .unwrap();
